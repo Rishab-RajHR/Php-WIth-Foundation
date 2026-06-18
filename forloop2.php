@@ -12,7 +12,7 @@ $b=10;
 
 for($i=$a;$i<=$b;$i++)
 {
-    echo "$i |";
+    echo "$i |";  // we use | for seperation b/w two  numbers.
 }
 
 ?>
