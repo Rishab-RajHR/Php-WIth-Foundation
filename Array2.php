@@ -21,8 +21,19 @@ echo "<br> $n";
 for($i=0; $i<$n; $i++)
 {
    echo "<br>$a[$i]";
+  //  $a[$i]='abc';
 }
+echo "<br>";
+print_r($a);
 
+// ReadOnly loop or safe loop 
+foreach($a as $x)
+{
+    echo "<br>$x";
+    $x = 'abc';
+}
+echo "<br>";
+print_r($a);
 ?>
 </body>
 </html>
