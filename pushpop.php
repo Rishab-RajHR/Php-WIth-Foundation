@@ -19,6 +19,12 @@ echo "<br> After push array is <br>";
 
 print_r($a);
 
+array_pop($a);
+
+echo "<br> After Pop Array is <br>";
+
+print_r($a);
+
 ?>
 </body>
 </html>
