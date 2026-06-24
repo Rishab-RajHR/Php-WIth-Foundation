@@ -14,9 +14,19 @@ echo "<br>Original Array is <br>";
 
 print_r($a);
 
+// Unshift adds the element in the beginning
+
 array_unshift($a, 'PHP');
 
 echo "<br>After Unshift Array is <br>";
+
+print_r($a);
+
+// Shift removes the element from the beginning
+
+array_shift($a);
+
+echo "<br>After shift Array is <br>";
 
 print_r($a);
 
