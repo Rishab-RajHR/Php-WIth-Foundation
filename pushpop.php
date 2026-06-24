@@ -13,6 +13,12 @@ echo "<br> Original Array is <br>";
 
 print_r($a);
 
+array_push($a,"PHP");
+
+echo "<br> After push array is <br>";
+
+print_r($a);
+
 ?>
 </body>
 </html>
