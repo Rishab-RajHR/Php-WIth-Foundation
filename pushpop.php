@@ -19,7 +19,9 @@ echo "<br> After push array is <br>";
 
 print_r($a);
 
-array_pop($a);
+$x=array_pop($a);
+
+echo "<br> Popped Value is $x";
 
 echo "<br> After Pop Array is <br>";
 
