@@ -16,8 +16,10 @@ $m = $s/60;
 echo "<br>Minutes=$m";
 $h = $m/60;
 echo "<br>Hours=$h";
-$d = $h/60;
-echo "<br>Day=$d";
+$d = $h/24;
+echo "<br>Days=$d";
+$y = $d/365;
+echo "<br>Years=$y";
 ?>
 </body>
 </html>
