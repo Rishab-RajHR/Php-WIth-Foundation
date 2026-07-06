@@ -35,4 +35,23 @@ if(isset($_POST['modify']))
    $n = my_iud($query);
    echo "$n Record Modified";
 }
+
+if(isset($_POST['remove']))
+{
+    $tid = $_POST['tid'];
+    $tname = $_POST['tname'];
+    $query = "Delete from team where teamid=$tid";
+    $n = my_iud($query);
+    echo "$n Record Removed";
+}
+
+if(isset($_POST['search']))
+{
+    $tid = $_POST['tid'];
+    $tname = $_POST['tname'];
+    $query = "SELECT * FROM team";   // * means all
+    $rs = my_select($query);
+    $n = mysqli_num_rows($rs);
+    echo "$n Record Found";
+}
 ?>
