@@ -12,6 +12,8 @@
         <input type="submit" value="Modify" name="modify">
         <input type="submit" value="Remove" name="remove">
         <input type="submit" value="Search" name="search">
+        <input type="submit" value="Search Via ID" name="search1">
+        <input type="submit" value="Search Via Name" name="search2">
      </form>
   </body>
 </html>
@@ -50,6 +52,54 @@ if(isset($_POST['search']))
     $tid = $_POST['tid'];
     $tname = $_POST['tname'];
     $query = "SELECT * FROM team";   // * means all
+    $rs = my_select($query);
+    $n = mysqli_num_rows($rs);
+    echo "$n Record Found";
+
+    echo "<table border = 5>";
+    echo "<tr><th>Team ID</th><th>Team Name</th></tr>";
+    while($row = mysqli_fetch_array(($rs)))
+    {
+      //   echo "<br>Team ID is $row[0]";
+      //   echo "<br>Team ID is $row[1]";
+      echo "<tr>";
+      echo "<td>$row[0]</td>";
+      echo "<td>$row[1]</td>";
+      echo "</tr>";
+    }
+    echo "</table>";
+}
+
+
+if(isset($_POST['search1']))
+{
+    $tid = $_POST['tid'];
+    $tname = $_POST['tname'];
+    $query = "SELECT * FROM team WHERE teamid='$tid'";   
+    $rs = my_select($query);
+    $n = mysqli_num_rows($rs);
+    echo "$n Record Found";
+
+    echo "<table border = 5>";
+    echo "<tr><th>Team ID</th><th>Team Name</th></tr>";
+    while($row = mysqli_fetch_array(($rs)))
+    {
+      //   echo "<br>Team ID is $row[0]";
+      //   echo "<br>Team ID is $row[1]";
+      echo "<tr>";
+      echo "<td>$row[0]</td>";
+      echo "<td>$row[1]</td>";
+      echo "</tr>";
+    }
+    echo "</table>";
+}
+
+
+if(isset($_POST['search2']))
+{
+    $tid = $_POST['tid'];
+    $tname = $_POST['tname'];
+    $query = "SELECT * FROM team WHERE teamname='$tname'";   
     $rs = my_select($query);
     $n = mysqli_num_rows($rs);
     echo "$n Record Found";
