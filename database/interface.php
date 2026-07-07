@@ -53,5 +53,18 @@ if(isset($_POST['search']))
     $rs = my_select($query);
     $n = mysqli_num_rows($rs);
     echo "$n Record Found";
+
+    echo "<table border = 5>";
+    echo "<tr><th>Team ID</th><th>Team Name</th></tr>";
+    while($row = mysqli_fetch_array(($rs)))
+    {
+      //   echo "<br>Team ID is $row[0]";
+      //   echo "<br>Team ID is $row[1]";
+      echo "<tr>";
+      echo "<td>$row[0]</td>";
+      echo "<td>$row[1]</td>";
+      echo "</tr>";
+    }
+    echo "</table>";
 }
 ?>
