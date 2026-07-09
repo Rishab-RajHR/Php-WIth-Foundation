@@ -12,6 +12,7 @@
        Email :
        <br>
        Address :
+       <br>
      </div>
      
      <?php include "bottom.php";?>
