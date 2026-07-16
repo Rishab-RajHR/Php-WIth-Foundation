@@ -56,6 +56,8 @@ if(isset($_POST['list']))
 }
 
 if(isset($_POST['remove']))
-unlink('student.csv');
-
+{
+unlink('student.csv');   // removes file from harddisk
+echo "File is removed";
+}
 ?>
