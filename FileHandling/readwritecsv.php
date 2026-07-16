@@ -38,4 +38,24 @@ if(isset($_POST['save']))
     fclose($fp);
 }
 
+if(isset($_POST['list']))
+{
+    $fp = fopen('student.csv','r');  // r = read mode
+    $fs = filesize('student.csv');
+    $seperator = ",";
+    while($row = fgetcsv($fp,$fs,$seperator))
+    {
+           echo "<br>";
+           echo "<br>Roll No. is $row[0]";
+           echo "<br>Name is $row[1]";
+           echo "<br>Sem is $row[2]";
+           echo "<br>Branch is $row[3]";
+           echo "<br>Marks is $row[4]";
+    }
+
+}
+
+if(isset($_POST['remove']))
+unlink('student.csv');
+
 ?>
