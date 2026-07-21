@@ -1,3 +1,3 @@
 <?php
-   echo gethostbyname('www.google.com');
+   echo gethostbyname('www.google.com'); 
 ?>
