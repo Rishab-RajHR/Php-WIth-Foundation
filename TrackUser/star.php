@@ -20,7 +20,7 @@
   <span class="fa fa-star"></span>
 
   <?php 
-    // if($row['rating'] == 2)
+    // if($row['rating'] == 1)
     { 
     ?>
     <span class="fa fa-star checked"></span>
